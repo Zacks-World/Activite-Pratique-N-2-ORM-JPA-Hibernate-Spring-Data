@@ -1,4 +1,4 @@
-package Entities;
+package org.example.patientapp.Entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
 import java.util.Date;
 @Entity
 @Data
@@ -20,7 +21,7 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Date dateNaissance;
+    private LocalDate dateNaissance;
     private boolean malade;
     private int score;
 }
